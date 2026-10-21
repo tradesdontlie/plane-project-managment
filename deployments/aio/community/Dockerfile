@@ -4,7 +4,7 @@ FROM --platform=$BUILDPLATFORM tonistiigi/binfmt AS binfmt
 # **************************************************
 #  STAGE 0: Image Loading
 # **************************************************
-FROM node:22-alpine AS node
+FROM node:22.23.4-alpine AS node
 
 FROM makeplane/plane-frontend:${PLANE_VERSION} AS web-img
 FROM makeplane/plane-backend:${PLANE_VERSION} AS backend-img
